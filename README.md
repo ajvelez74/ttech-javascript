@@ -1,5 +1,5 @@
 # Calculadora de Cambio
-Este es un ejemplo elaborado en el marco de la iniciativa de formación (bootcamp) "Progamación Nivel Básico" en el marco de la iniciativa Talento Tech del Ministerio de Tecnologías de Inormación y Comunicaciones (MinTIC)
+Este es un ejemplo elaborado en el marco de la iniciativa de formación (bootcamp) "Progamación Nivel Básico" en el marco de la iniciativa Talento Tech del Ministerio de Tecnologías de Información y Comunicaciones (MinTIC)
 
 Este ejemplo pretende mostrar:
 1. La implementación de un algoritmo en el lenguaje de programación JavaScript
