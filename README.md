@@ -1,4 +1,4 @@
-# Tema 03 - JavaScript
+# Tema 04 - JavaScript
 Estos ejemplos son elaborado en el marco de la iniciativa de formación (bootcamp) de "Progamación Nivel Básico" en el marco de la iniciativa Talento Tech del Ministerio de Tecnologías de Información y Comunicaciones (MinTIC).
 En términos generales, todos los ejemplos ilustran 
 1. La implementación de un formulario HTML para el ingreso de información por parte del usuario
