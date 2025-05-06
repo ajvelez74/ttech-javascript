@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el Cambio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funciones.js" defer></script>
+</head>
+<body>
+    <div class="tarjeta">
+        <h1>Calculadora de Salario por Horas</h1>
+        <form onsubmit="procesarFormulario(event)" method="get">
+            <label for="cantidadProductos">Cantidad de Productos:</label>
+            <input type="number" id="cantidadProductos" required>
+            <br>
+            <label for="valorProducto">Valor por Unidad:</label>
+            <input type="number" id="valorProducto" required>
+            <br>
+            <label for="dinero">Monto con el que se paga:</label>
+            <input type="number" id="dinero" required>
+            <br>
+            <div class="botones">
+                <button type="submit">Calcular Cambio</button>
+                <button type="reset" id="limpiar">Limpiar</button>
+            </div>
+        </form>
+        <p>El valor a pagar es de : <b id="cambio">0.0</b></p>
+    </div>
+    <script>
+        function procesarFormulario(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+            // Obtener los valores de los campos
+            const cantidadProductos = document.getElementById('cantidadProductos').value;
+            const valorProducto = document.getElementById('valorProducto').value;
+            const dinero = document.getElementById('dinero').value;
+            // Calcular el salario (llamado a la función)
+            const salario = calcularCambio(cantidadProductos, valorProducto, dinero);
+            // Mostrar el resultado 
+            document.getElementById('cambio').innerText = salario;
+        }
+    </script>
+    
+</body>
+</html>
