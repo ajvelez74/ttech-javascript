@@ -14,6 +14,7 @@ body {
 .tarjeta h1 {
     color: #333;
     font-size: 22px;
+    text-align: center;
 }
 
 label , input {
