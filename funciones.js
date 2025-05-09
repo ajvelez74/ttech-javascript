@@ -38,3 +38,55 @@ function calcularValorSalario ( horasTrabajadas , valorHora  ) {
     // Devolver el resultado
     return salarioTotal ;
 }
+
+//
+// Hacer la suma de los primeros n números pares
+// (para n > 0)
+// 
+function sumarParesWhile ( n ) { 
+    let contador  = 1 ;
+    let resultado = 0 ;
+    let valor = 2 ;
+    while (contador <= n) {
+        resultado = resultado + valor ;
+        contador = contador + 1 ;
+        valor = valor + 2 ;
+    }
+    return resultado ;
+}
+
+function sumarParesFor ( n ) { 
+    //let contador  = 1 ;
+    let resultado = 0 ;
+    let valor = 2 ;
+    //while (contador <= n) {
+    for (let contador  = 1  ; contador <= n ; contador ++  ) {
+        resultado = resultado + valor ;
+        //contador = contador + 1 ;
+        valor = valor + 2 ;
+    }
+    return resultado ;
+}
+
+
+
+//
+// Hacer la suma de todos los elementos de un arreglo
+// 
+function sumarElementos ( arreglo ) { 
+    let suma = 0 ;
+    for (let indice = 0 ; indice < arreglo.length ; indice ++ ) {
+        suma += arreglo[indice] ; // suma = suma + arreglo[indice] ;
+    }
+    return suma;
+}
+
+function sumarElementosWhile ( arreglo ) { 
+    let indice = 0 ;
+    let suma = 0 ;
+    while ( indice < arreglo.length  ) {
+        suma += arreglo[indice] ; // suma = suma + arreglo[indice] ;
+        indice ++ ; // indice = indice + 1 ;
+    }
+    return suma;
+}

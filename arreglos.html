@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funciones.js" defer></script>
+</head>
+
+<body>
+    <div class="tarjeta">
+        <h1>Uso de Arreglos</h1>
+        <form onsubmit="procesarFormulario(event)" method="get">
+            <label for="valores">Ingrese los valores separados por una coma:</label>
+            <input type="text" id="valores" required placeholder="Ej: 1,2,3,4,5">
+            <div class="botones">
+                <button type="submit">Calcular Suma</button>
+                <button type="reset" id="limpiar">Limpiar</button>
+            </div>
+        </form>
+        <p>La suma de los valores <b id="arreglo"></b> es : <b id="suma">0.0</b></p>
+    </div>
+    <script>
+        function procesarFormulario(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+            // Obtener los valores de los campos
+            const valores = document.getElementById('valores').value;
+            // Convertir la cadena de texto en un arreglo
+            const arreglo = valores.split(',').map(Number);
+            // Calcular el salario (llamado a la función)
+            const suma = sumarElementos(arreglo);
+            // Mostrar el resultado 
+            document.getElementById('arreglo').innerText = valores;
+            document.getElementById('suma').innerText = suma;
+        }
+    </script>
+</body>
+
+</html>

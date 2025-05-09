@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Número Pares</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funciones.js" defer></script>
+</head>
+
+<body>
+    <div class="tarjeta">
+        <h1>Suma de Número Pares</h1>
+        <form onsubmit="procesarFormulario(event)" method="get">
+            <label for="cantidad">Cantidad de números a sumar:</label>
+            <input type="number" id="cantidad" required>
+            <div class="botones">
+                <button type="submit">Calcular Suma</button>
+                <button type="reset" id="limpiar">Limpiar</button>
+            </div>
+        </form>
+        <p>La suma de los primeros <b id="rcantidad"></b> números pares es : <b id="suma">0.0</b></p>
+    </div>
+    <script>
+        function procesarFormulario(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+            // Obtener los valores de los campos
+            const cantidad = parseInt(document.getElementById('cantidad').value, 10);
+            // Calcular el salario (llamado a la función)
+            const suma = sumarParesWhile(cantidad);
+            // Mostrar el resultado 
+            document.getElementById('rcantidad').innerText = cantidad;
+            document.getElementById('suma').innerText = suma;
+        }
+    </script>
+</body>
+
+</html>
