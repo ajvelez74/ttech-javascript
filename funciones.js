@@ -4,7 +4,7 @@
 // producto y el monto con el cual paga un cliente, diseñe un algoritmo 
 // que permita calcular el cambio que debe entregar.
 //
-function calcularCambio ( porciones, valorPorcion , dineroPaga  ) {
+function calcularCambio ( porciones , valorPorcion , dineroPaga  ) {
     // Calcular el costo de los productos comprar
     let costoProductos = valorPorcion * porciones ;
     // Calcular el valor que queda de cambio
@@ -68,8 +68,6 @@ function sumarParesFor ( n ) {
     return resultado ;
 }
 
-
-
 //
 // Hacer la suma de todos los elementos de un arreglo
 // 
@@ -89,4 +87,49 @@ function sumarElementosWhile ( arreglo ) {
         indice ++ ; // indice = indice + 1 ;
     }
     return suma;
+}
+
+function calcularPromedio ( arreglo ) { 
+    // Calcular la suma de todos los elementos del arreglo
+    let suma = sumarElementosWhile(arreglo) ;
+    //Calcular el promedio
+    let promedio = suma / arreglo.length ;
+    return promedio;
+}
+
+//
+// Ejemplo del uso de lambda functions
+// 
+function sumarElementos ( arreglo ) { 
+    // sumar todos los elementos de un arreglo usando funciones map y reduce
+    suma = arreglo.reduce((acumulador, valor) => acumulador + valor, 0);
+    return suma;
+}
+
+
+// 
+// Calcuylar el factorial de un número (n)
+// Ejemplo: 5! = 5 * 4 * 3 * 2 * 1 = 1 * 2 * 3 * 4 * 5 = 120
+//
+function calcularFactorial ( n ) { 
+    let resultado = 1 ;
+    for (let i = 1 ; i <= n ; i ++ ) {
+        resultado = resultado * i ;
+    }
+    return resultado ;
+}
+
+//
+// facto(n) = n * facto(n-1)
+// facto(0) = 1
+// facto(1) = 1
+//
+function calcularFactorialRecursivo ( n ) { 
+    // Condicion de parada
+    if (n == 0 || n == 1) {
+        return 1 ;
+    } else {
+        // Llamado recursivo
+        return n * calcularFactorialRecursivo(n - 1) ;
+    }
 }
