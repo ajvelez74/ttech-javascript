@@ -5,8 +5,23 @@
 // que permita calcular el cambio que debe entregar.
 //
 function calcularCambio ( porciones , valorPorcion , dineroPaga  ) {
+    if (!(porciones > 0)) {
+        throw new Error("La cantidad de porciones debe ser un valor mayor a 0");
+    }
+    if (!(valorPorcion > 0)) {
+        throw new Error("El valor de la porcion debe ser un valor mayor a 0");
+    }
+    if (!(dineroPaga > 0)) {
+        throw new Error("El dinero con que se paga debe ser mayor a 0");
+    }
+
     // Calcular el costo de los productos comprar
     let costoProductos = valorPorcion * porciones ;
+
+    if (costoProductos > dineroPaga) {
+        throw new Error("El dinero con que se paga es menor al costo de los productos");
+    }
+
     // Calcular el valor que queda de cambio
     let cambio = dineroPaga - costoProductos ;
     // Devolver el resultado
@@ -21,6 +36,14 @@ function calcularCambio ( porciones , valorPorcion , dineroPaga  ) {
 // de la hora normal.
 // 
 function calcularValorSalario ( horasTrabajadas , valorHora  ) { 
+
+    if (!(horasTrabajadas > 0)) {
+        throw new Error("La cantidad de horas trabajadas debe ser mayor a 0");
+    }
+    if (!(valorHora > 0)) {
+        throw new Error("El valor de la hora debe ser mayor a 0");
+    }
+
     let salarioTotal = 0 ;
     
     if (horasTrabajadas <= 40) {
